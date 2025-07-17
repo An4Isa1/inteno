@@ -3,31 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pensum Economía - UMNG</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Pensum Economía</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1><em>Pensum Economía</em></h1>
-  <h2><em>UMNG</em></h2>
-  <button onclick="reiniciarProgreso()">🔄 Reiniciar progreso</button>
+  <header>
+    <h1 class="titulo">*Pensum Economía*</h1>
+    <h2 class="subtitulo">UMNG</h2>
+  </header>
 
-  <div class="fila fila-superior">
-    <div id="semestre-1" class="semestre semestre-1"></div>
-    <div id="semestre-2" class="semestre semestre-2"></div>
-    <div id="semestre-3" class="semestre semestre-3"></div>
-    <div id="semestre-4" class="semestre semestre-4"></div>
+  <main id="pensum-container"></main>
+
+  <div class="botones">
+    <button onclick="reiniciar()">Reiniciar Progreso</button>
   </div>
 
-  <div class="fila fila-inferior">
-    <div id="semestre-5" class="semestre semestre-5"></div>
-    <div id="semestre-6" class="semestre semestre-6"></div>
-    <div id="semestre-7" class="semestre semestre-7"></div>
-    <div id="semestre-8" class="semestre semestre-8"></div>
-    <div id="semestre-9" class="semestre semestre-9"></div>
-  </div>
-
-  <h3><em>Tabla resumen por semestre</em></h3>
-  <div id="resumen-tabla"></div>
+  <div id="tabla-resumen"></div>
 
   <script src="script.js"></script>
 </body>
