@@ -7,15 +7,27 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1 class="titulo">*Pensum Economía*</h1>
-  <h2 class="subtitulo">UMNG</h2>
-  <div class="contenedor-semestres" id="contenedor-semestres"></div>
+  <h1><em>Pensum Economía</em></h1>
+  <h2><em>UMNG</em></h2>
+  <button onclick="reiniciarProgreso()">🔄 Reiniciar progreso</button>
 
-  <div class="resumen">
-    <button onclick="reiniciarProgreso()">🔄 Reiniciar progreso</button>
-    <h3>Tabla resumen por semestre</h3>
-    <div id="tablaResumen"></div>
+  <div class="fila fila-superior">
+    <div id="semestre-1" class="semestre semestre-1"></div>
+    <div id="semestre-2" class="semestre semestre-2"></div>
+    <div id="semestre-3" class="semestre semestre-3"></div>
+    <div id="semestre-4" class="semestre semestre-4"></div>
   </div>
+
+  <div class="fila fila-inferior">
+    <div id="semestre-5" class="semestre semestre-5"></div>
+    <div id="semestre-6" class="semestre semestre-6"></div>
+    <div id="semestre-7" class="semestre semestre-7"></div>
+    <div id="semestre-8" class="semestre semestre-8"></div>
+    <div id="semestre-9" class="semestre semestre-9"></div>
+  </div>
+
+  <h3><em>Tabla resumen por semestre</em></h3>
+  <div id="resumen-tabla"></div>
 
   <script src="script.js"></script>
 </body>
