@@ -3,28 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pensum Economía</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Pensum Economía - UMNG</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1><em>Pensum Economía</em></h1>
-  <h2><em>UMNG</em></h2>
-  <button onclick="reiniciarProgreso()">Reiniciar progreso</button>
+  <h1 class="titulo">*Pensum Economía*</h1>
+  <h2 class="subtitulo">UMNG</h2>
+  <div class="contenedor-semestres" id="contenedor-semestres"></div>
 
-  <div id="pensum-container"></div>
-
-  <h3><em>Resumen por semestre</em></h3>
-  <table id="resumen">
-    <thead>
-      <tr>
-        <th>Semestre</th>
-        <th>Materia</th>
-        <th>Promedio</th>
-        <th>Profesor</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+  <div class="resumen">
+    <button onclick="reiniciarProgreso()">🔄 Reiniciar progreso</button>
+    <h3>Tabla resumen por semestre</h3>
+    <div id="tablaResumen"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>
