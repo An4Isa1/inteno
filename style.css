@@ -1,82 +1,79 @@
 body {
   font-family: "Times New Roman", serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #f4f5f7;
+  text-align: center;
 }
 
-.titulo {
+h1 {
   font-family: Georgia, serif;
   font-style: italic;
-  font-size: 2em;
-  text-align: center;
-  margin: 0;
-}
-
-.subtitulo {
-  font-family: "Times New Roman", serif;
-  text-align: center;
-  margin-top: 5px;
-  color: #333;
-}
-
-.semestre {
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-  flex: 1;
-  min-width: 250px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.semestre h3 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.materia {
-  background-color: white;
-  margin: 5px 0;
-  padding: 6px 8px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.materia.aprobada {
-  text-decoration: line-through;
-  background-color: #c8e6c9;
-}
-
-.fila-superior,
-.fila-inferior {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.botones {
-  margin-top: 20px;
-  text-align: center;
-}
-
-button {
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.tabla-resumen {
+  font-size: 2.5em;
+  color: #002f6c;
   margin-top: 30px;
 }
 
+h2 {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.5em;
+  color: #003d99;
+  margin-bottom: 40px;
+}
+
+button {
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.semestre {
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  min-height: 200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: #000;
+}
+
+.semestre h3 {
+  margin-bottom: 10px;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.materia {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  text-align: left;
+}
+
+.materia.bloqueada {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.materia.aprobada {
+  background-color: #d4edda;
+  text-decoration: underline;
+}
+
 /* Colores por semestre */
-.semestre-1 { background-color: #FFCDD2; }
-.semestre-2 { background-color: #F8BBD0; }
-.semestre-3 { background-color: #E1BEE7; }
-.semestre-4 { background-color: #D1C4E9; }
-.semestre-5 { background-color: #C5CAE9; }
-.semestre-6 { background-color: #B3E5FC; }
-.semestre-7 { background-color: #B2DFDB; }
-.semestre-8 { background-color: #DCEDC8; }
-.semestre-9 { background-color: #FFF9C4; }
+.semestre-1 { background-color: #ffdddd; }
+.semestre-2 { background-color: #ffeeba; }
+.semestre-3 { background-color: #d4edda; }
+.semestre-4 { background-color: #cce5ff; }
+.semestre-5 { background-color: #e2e3e5; }
+.semestre-6 { background-color: #f8d7da; }
+.semestre-7 { background-color: #fff3cd; }
+.semestre-8 { background-color: #d1ecf1; }
+.semestre-9 { background-color: #f5c6cb; }
