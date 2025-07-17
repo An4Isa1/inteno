@@ -1,155 +1,159 @@
-const materias = [
-  [
-    { nombre: "Economía I (Introducción a la Economía)", requisitos: [] },
-    { nombre: "Historia Económica General", requisitos: [] },
-    { nombre: "Matemáticas I", requisitos: [] },
-    { nombre: "Expresión Oral y Escrita", requisitos: [] },
-    { nombre: "Metodología de la Investigación", requisitos: [] },
-    { nombre: "Cátedra Neogranadina", requisitos: [] },
-    { nombre: "Principios Constitucionales", requisitos: [] }
-  ],
-  [
-    { nombre: "Microeconomía I", requisitos: ["Economía I (Introducción a la Economía)"] },
-    { nombre: "Historia Económica Colombiana", requisitos: ["Historia Económica General"] },
-    { nombre: "Matemáticas II", requisitos: ["Matemáticas I"] },
-    { nombre: "Estadística I", requisitos: [] },
-    { nombre: "Álgebra Lineal", requisitos: [] },
-    { nombre: "Humanidades I", requisitos: [] },
-    { nombre: "Extensión Cultural y Deportiva", requisitos: [] }
-  ],
-  [
-    { nombre: "Microeconomía II", requisitos: ["Microeconomía I"] },
-    { nombre: "Macroeconomía I", requisitos: ["Microeconomía I"] },
-    { nombre: "Matemáticas III", requisitos: ["Matemáticas II"] },
-    { nombre: "Estadística II", requisitos: ["Estadística I"] },
-    { nombre: "Medición Económica", requisitos: ["Microeconomía I"] }
-  ],
-  [
-    { nombre: "Microeconomía III", requisitos: ["Microeconomía II"] },
-    { nombre: "Macroeconomía II", requisitos: ["Macroeconomía I"] },
-    { nombre: "Economía Matemática", requisitos: ["Matemáticas III"] },
-    { nombre: "Estadística III", requisitos: ["Estadística I"] },
-    { nombre: "Contabilidad General", requisitos: [] }
-  ],
-  [
-    { nombre: "Macroeconomía III", requisitos: ["Microeconomía III", "Macroeconomía II", "Economía Matemática"] },
-    { nombre: "Doctrinas Económicas I", requisitos: [] },
-    { nombre: "Econometría I", requisitos: [] },
-    { nombre: "Énfasis I", requisitos: [] },
-    { nombre: "Matemáticas Financieras", requisitos: ["Estadística III"] },
-    { nombre: "Contabilidad de Costos", requisitos: ["Contabilidad General"] }
-  ],
-  [
-    { nombre: "Crecimiento Económico", requisitos: ["Macroeconomía III"] },
-    { nombre: "Doctrinas Económicas II", requisitos: ["Doctrinas Económicas I"] },
-    { nombre: "Econometría II", requisitos: [] },
-    { nombre: "Énfasis II", requisitos: [] },
-    { nombre: "Teoría de la Decisión", requisitos: [] },
-    { nombre: "Análisis Financiero", requisitos: ["Contabilidad de Costos"] }
-  ],
-  [
-    { nombre: "Teoría y Política Fiscal", requisitos: ["Crecimiento Económico"] },
-    { nombre: "Desarrollo Económico", requisitos: [] },
-    { nombre: "Teoría y Política Monetaria y Cambiaria", requisitos: [] },
-    { nombre: "Énfasis III", requisitos: [] },
-    { nombre: "Formulación y Evaluación de Proyectos", requisitos: [] },
-    { nombre: "Humanidades II", requisitos: [] }
-  ],
-  [
-    { nombre: "Electiva I en lo Público", requisitos: [] },
-    { nombre: "Electiva I en lo Económico", requisitos: [] },
-    { nombre: "Economía Internacional", requisitos: [] },
-    { nombre: "Énfasis IV", requisitos: [] },
-    { nombre: "Evaluación Económica y Social de Proyectos", requisitos: [] },
-    { nombre: "Ética Profesional", requisitos: [] }
-  ],
-  [
-    { nombre: "Electiva II en lo Público", requisitos: [] },
-    { nombre: "Electiva II en lo Económico", requisitos: [] },
-    { nombre: "Electiva en lo Internacional", requisitos: [] },
-    { nombre: "Electiva de Énfasis", requisitos: ["Estadística I"] },
-    { nombre: "Seminario de Grado", requisitos: [] }
-  ]
+const pensum = [
+  {
+    semestre: 1,
+    materias: [
+      { nombre: "Introducción a la Economía", requisitos: [] },
+      { nombre: "Matemáticas I", requisitos: [] },
+      { nombre: "Contabilidad General", requisitos: [] },
+      { nombre: "Administración General", requisitos: [] },
+      { nombre: "Cátedra UMNG", requisitos: [] }
+    ]
+  },
+  {
+    semestre: 2,
+    materias: [
+      { nombre: "Microeconomía I", requisitos: ["Introducción a la Economía", "Matemáticas I"] },
+      { nombre: "Matemáticas II", requisitos: ["Matemáticas I"] },
+      { nombre: "Contabilidad de Costos", requisitos: ["Contabilidad General"] },
+      { nombre: "Estadística I", requisitos: ["Matemáticas I"] },
+      { nombre: "Lectura y Escritura Académica", requisitos: [] }
+    ]
+  },
+  {
+    semestre: 3,
+    materias: [
+      { nombre: "Microeconomía II", requisitos: ["Microeconomía I", "Matemáticas II"] },
+      { nombre: "Macroeconomía I", requisitos: ["Microeconomía I"] },
+      { nombre: "Matemáticas III", requisitos: ["Matemáticas II"] },
+      { nombre: "Estadística II", requisitos: ["Estadística I"] },
+      { nombre: "Contabilidad Financiera", requisitos: ["Contabilidad de Costos"] }
+    ]
+  },
+  {
+    semestre: 4,
+    materias: [
+      { nombre: "Econometría I", requisitos: ["Estadística II", "Matemáticas III"] },
+      { nombre: "Macroeconomía II", requisitos: ["Macroeconomía I"] },
+      { nombre: "Historia Económica General", requisitos: [] },
+      { nombre: "Teoría de Juegos", requisitos: ["Microeconomía II"] },
+      { nombre: "Electiva I", requisitos: [] }
+    ]
+  },
+  {
+    semestre: 5,
+    materias: [
+      { nombre: "Economía Colombiana", requisitos: ["Historia Económica General"] },
+      { nombre: "Econometría II", requisitos: ["Econometría I"] },
+      { nombre: "Investigación de Operaciones", requisitos: ["Matemáticas III"] },
+      { nombre: "Teoría Monetaria", requisitos: ["Macroeconomía II"] },
+      { nombre: "Formulación y Evaluación de Proyectos", requisitos: ["Contabilidad Financiera"] }
+    ]
+  },
+  {
+    semestre: 6,
+    materias: [
+      { nombre: "Política Económica", requisitos: ["Macroeconomía II", "Economía Colombiana"] },
+      { nombre: "Desarrollo Económico", requisitos: ["Macroeconomía II"] },
+      { nombre: "Electiva II", requisitos: [] },
+      { nombre: "Economía Internacional", requisitos: ["Microeconomía II"] },
+      { nombre: "Matemática Financiera", requisitos: ["Matemáticas III"] }
+    ]
+  },
+  {
+    semestre: 7,
+    materias: [
+      { nombre: "Seminario de Investigación I", requisitos: ["Econometría II"] },
+      { nombre: "Economía del Sector Público", requisitos: ["Microeconomía II"] },
+      { nombre: "Gestión Pública", requisitos: ["Administración General"] },
+      { nombre: "Electiva III", requisitos: [] },
+      { nombre: "Electiva IV", requisitos: [] }
+    ]
+  },
+  {
+    semestre: 8,
+    materias: [
+      { nombre: "Seminario de Investigación II", requisitos: ["Seminario de Investigación I"] },
+      { nombre: "Electiva V", requisitos: [] },
+      { nombre: "Electiva VI", requisitos: [] },
+      { nombre: "Práctica Profesional", requisitos: ["Seminario de Investigación I"] }
+    ]
+  },
+  {
+    semestre: 9,
+    materias: [
+      { nombre: "Trabajo de Grado", requisitos: ["Seminario de Investigación II"] },
+      { nombre: "Electiva VII", requisitos: [] },
+      { nombre: "Electiva VIII", requisitos: [] }
+    ]
+  }
 ];
 
-function crearMateria(materia, nombreSemestre, i, j) {
+const estado = JSON.parse(localStorage.getItem("estadoPensum")) || {};
+
+function guardarEstado() {
+  localStorage.setItem("estadoPensum", JSON.stringify(estado));
+}
+
+function crearMateria(materia, semestre) {
   const div = document.createElement("div");
   div.className = "materia";
   div.textContent = materia.nombre;
-  const estado = localStorage.getItem(materia.nombre);
-  if (estado === "aprobada") div.classList.add("aprobada");
 
-  div.addEventListener("click", () => {
-    if (div.classList.contains("aprobada")) return;
+  const requisitosCumplidos = materia.requisitos.every(req => estado[req]?.aprobada);
 
-    const requisitos = materia.requisitos || [];
-    const noCumple = requisitos.filter(req => localStorage.getItem(req) !== "aprobada");
-    if (noCumple.length > 0) {
-      alert(`No puedes aprobar esta materia aún. Requisitos pendientes:\n${noCumple.join("\n")}`);
-      return;
-    }
+  if (!requisitosCumplidos) {
+    div.classList.add("bloqueada");
+  }
+
+  if (estado[materia.nombre]?.aprobada) {
+    div.classList.add("aprobada");
+    div.textContent += ` (Prof: ${estado[materia.nombre].profesor}, Prom: ${estado[materia.nombre].promedio})`;
+  }
+
+  div.onclick = () => {
+    if (!requisitosCumplidos || estado[materia.nombre]?.aprobada) return;
 
     const notas = [];
     for (let i = 1; i <= 3; i++) {
       const nota = parseFloat(prompt(`Ingrese la nota del corte ${i} para ${materia.nombre}`));
-      if (isNaN(nota) || nota < 0 || nota > 5) {
-        alert("Nota inválida. Intente de nuevo.");
-        return;
-      }
+      if (isNaN(nota)) return;
       notas.push(nota);
     }
 
-    const promedio = (notas.reduce((a, b) => a + b) / 3).toFixed(2);
-    const profesor = prompt(`Ingrese el nombre del profesor de ${materia.nombre}:`);
+    const profesor = prompt(`Ingrese el nombre del profesor para ${materia.nombre}`);
+    const promedio = (notas.reduce((a, b) => a + b, 0) / 3).toFixed(2);
 
-    div.innerHTML = `
-      ✅ ${materia.nombre}<br>
-      Notas: ${notas.join(", ")}<br>
-      Promedio: ${promedio}<br>
-      Profesor: ${profesor}
-    `;
-    div.classList.add("aprobada");
-    localStorage.setItem(materia.nombre, "aprobada");
-  });
+    estado[materia.nombre] = { aprobada: true, profesor, promedio };
+    guardarEstado();
+    location.reload();
+  };
 
   return div;
 }
 
-function renderizarPensum() {
-  const container = document.getElementById("pensum-container");
-  container.innerHTML = "";
+function crearSemestres() {
+  const contenedor = document.getElementById("contenedor");
+  pensum.forEach(bloque => {
+    const div = document.createElement("div");
+    div.className = `semestre semestre-${bloque.semestre}`;
 
-  const filaSuperior = document.createElement("div");
-  filaSuperior.className = "fila-superior";
-  const filaInferior = document.createElement("div");
-  filaInferior.className = "fila-inferior";
+    const titulo = document.createElement("h3");
+    titulo.textContent = `Semestre ${bloque.semestre}`;
+    div.appendChild(titulo);
 
-  materias.forEach((semestre, index) => {
-    const semestreDiv = document.createElement("div");
-    semestreDiv.className = `semestre semestre-${index + 1}`;
-    semestreDiv.innerHTML = `<h3>Semestre ${index + 1}</h3>`;
-
-    semestre.forEach(materia => {
-      const div = crearMateria(materia, index + 1);
-      semestreDiv.appendChild(div);
+    bloque.materias.forEach(materia => {
+      div.appendChild(crearMateria(materia, bloque.semestre));
     });
 
-    if (index < 4) {
-      filaSuperior.appendChild(semestreDiv);
-    } else {
-      filaInferior.appendChild(semestreDiv);
-    }
+    contenedor.appendChild(div);
   });
-
-  container.appendChild(filaSuperior);
-  container.appendChild(filaInferior);
 }
 
-function reiniciar() {
-  if (confirm("¿Estás seguro que deseas reiniciar todo el progreso?")) {
+document.getElementById("reiniciar").onclick = () => {
+  if (confirm("¿Estás seguro de que deseas reiniciar tu progreso?")) {
     localStorage.clear();
-    renderizarPensum();
+    location.reload();
   }
-}
+};
 
-window.onload = renderizarPensum;
+crearSemestres();
